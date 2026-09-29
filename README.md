@@ -8,7 +8,7 @@ Conecta capitanes que buscan tripulación con gente que quiere salir a navegar.
 
 ```bash
 npm install
-cp .env.example .env.local   # completar NEXT_PUBLIC_SUPABASE_ANON_KEY
+cp .env.example .env.local   # completar NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
 npm run dev                  # http://localhost:3000
 ```
 
