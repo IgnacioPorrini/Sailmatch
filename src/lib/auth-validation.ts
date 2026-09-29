@@ -25,6 +25,8 @@ export function validatePasswordConfirm(
 // Traduce los mensajes más comunes de Supabase Auth a algo amigable.
 export function friendlyAuthError(message: string): string {
   const m = message.toLowerCase();
+  if (m.includes("failed to fetch") || m.includes("networkerror") || m.includes("load failed"))
+    return "No se pudo conectar con el servidor. Revisá tu conexión e intentá de nuevo.";
   if (m.includes("invalid login credentials"))
     return "Email o contraseña incorrectos.";
   if (m.includes("email not confirmed"))
